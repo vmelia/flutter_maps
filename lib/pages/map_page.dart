@@ -12,10 +12,11 @@ class MapPage extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Colors.black,
         onPressed: () {
-          context.read<MapBloc>().add(ResetLocationEvent());
+          context.read<MapBloc>().add(ResetCameraPositionEvent());
         },
         child: Icon(Icons.center_focus_strong),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 }
